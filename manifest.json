@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Twitter Enhanced",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "description": "Removes age-assurance gates and sensitive-media blurring on X / Twitter by intercepting webpack feature flags and GraphQL responses.",
   "author": "neo",
   "icons": {
