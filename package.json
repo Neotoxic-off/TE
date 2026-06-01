@@ -1,0 +1,42 @@
+{
+  "name": "twitter-enhanced",
+  "version": "4.0.0",
+  "private": true,
+  "description": "Twitter Enhanced – Firefox extension. Age-gate + sensitive-media bypass for X.com with a Next.js UI.",
+  "license": "GPL-3.0-or-later",
+  "author": "neo",
+  "scripts": {
+    "dev:ui": "next dev",
+    "build:ui": "next build",
+    "build:scripts": "node esbuild.mjs",
+    "build": "npm run build:ui && npm run build:scripts && node scripts/assemble.mjs",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true});require('fs').rmSync('out',{recursive:true,force:true})\"",
+    "lint": "next lint",
+    "package": "npm run build && node scripts/zip.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-switch": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.474.0",
+    "next": "^16.2.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/firefox-webext-browser": "^120.0.4",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.7.3"
+  }
+}
